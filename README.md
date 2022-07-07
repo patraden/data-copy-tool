@@ -1,6 +1,5 @@
 # Data Copy Tool
-
-
+Simple file copy utility to PostgreSQL leveraging spark file readers and akka reactive streams in conjunction with Posgres copy command.
 
 ## Getting started
 
