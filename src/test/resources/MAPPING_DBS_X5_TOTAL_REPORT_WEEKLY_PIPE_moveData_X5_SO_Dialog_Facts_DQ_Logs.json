@@ -1,0 +1,72 @@
+[
+	{
+		"source": {
+			"name": "Timestamp",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "Timestamp",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "isEqualPeriods",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "isEqualPeriods",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "isEqualSumEA",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "isEqualSumEA",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "AmountOfAllPeriods",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "AmountOfAllPeriods",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "AverageAmountOfPeriodsInFiles",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "AverageAmountOfPeriodsInFiles",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "AmountT",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "AmountT",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "AmountEqualSumEA",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "AmountEqualSumEA",
+			"type": "Int32"
+		}
+	}
+]

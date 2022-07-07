@@ -1,0 +1,62 @@
+[
+	{
+		"source": {
+			"name": "path",
+			"type": "String",
+			"physicalType": "UTF8"
+		},
+		"sink": {
+			"name": "path",
+			"type": "String",
+			"physicalType": "nvarchar"
+		}
+	},
+	{
+		"source": {
+			"name": "modificationTime",
+			"type": "DateTime",
+			"physicalType": "INT96"
+		},
+		"sink": {
+			"name": "modificationTime",
+			"type": "DateTime",
+			"physicalType": "datetime2"
+		}
+	},
+	{
+		"source": {
+			"name": "length",
+			"type": "Int64",
+			"physicalType": "INT64"
+		},
+		"sink": {
+			"name": "length",
+			"type": "Int64",
+			"physicalType": "bigint"
+		}
+	},
+	{
+		"source": {
+			"name": "content",
+			"type": "Byte[]",
+			"physicalType": "BINARY"
+		},
+		"sink": {
+			"name": "content",
+			"type": "Byte[]",
+			"physicalType": "varbinary"
+		}
+	},
+	{
+		"source": {
+			"name": "Filename",
+			"type": "String",
+			"physicalType": "UTF8"
+		},
+		"sink": {
+			"name": "Filename",
+			"type": "String",
+			"physicalType": "nvarchar"
+		}
+	}
+]

@@ -1,0 +1,262 @@
+[
+	{
+		"source": {
+			"name": "POS_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "POS_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "POS_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "POS_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DC",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DC",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANCH",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANCH",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ADDRESS",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ADDRESS",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMAT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMAT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CITY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CITY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "__INGEST_TS__",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "INGEST_TIMESTAMP",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "Distributor_Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Distributor_Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Filial",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Filial",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Subname",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Subname",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_OutletType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_OutletType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_AddressCity",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_AddressCity",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_AddressRegion",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_AddressRegion",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Format2",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Format2",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_Cluster",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_Cluster",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Outlets_GLN",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Outlets_GLN",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chain_SystemName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Chain_SystemName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chain_DistributorENGName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Chain_DistributorENGName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chain_Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Chain_Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chain_GHierarchyCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Chain_GHierarchyCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsRegion_ENGName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsRegion_ENGName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ERROR_TYPE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ERROR_TYPE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "COMMENTS",
+			"type": "String"
+		},
+		"sink": {
+			"name": "COMMENTS",
+			"type": "String"
+		}
+	}
+]

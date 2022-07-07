@@ -1,0 +1,32 @@
+[
+	{
+		"source": {
+			"name": "X5_Region",
+			"type": "String"
+		},
+		"sink": {
+			"name": "X5_Region",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Mars_region",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Mars_region",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "X5_MacroRegion",
+			"type": "String"
+		},
+		"sink": {
+			"name": "X5_MacroRegion",
+			"type": "String"
+		}
+	}
+]

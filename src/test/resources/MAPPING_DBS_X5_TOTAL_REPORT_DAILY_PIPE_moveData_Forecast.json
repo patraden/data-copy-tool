@@ -1,0 +1,131 @@
+[
+	{
+		"source": {
+			"name": "SHIPTONAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SHIPTONAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MATERIAL_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MATERIAL_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLANT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLANT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "GHIERARCHYCODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GHIERARCHYCODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MARS_WEEK",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MARS_WEEK",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ZREP",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ZREP",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "F_STARTDATE",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "F_STARTDATE",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "F_ENDDATE",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "F_ENDDATE",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "GEOUNIT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GEOUNIT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORECAST_CASES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "FORECAST_CASES",
+			"type": "Single"
+		}
+	},
+	{
+		"source": {
+			"name": "FORECAST_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "FORECAST_TONNES",
+			"type": "Single"
+		}
+	},
+	{
+		"source": {
+			"name": "timestamp",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "timestamp",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "FORECAST_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "FORECAST_LSV"
+		}
+	}
+]

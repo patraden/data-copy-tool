@@ -1,0 +1,62 @@
+[
+	{
+		"source": {
+			"name": "YEAR",
+			"type": "String"
+		},
+		"sink": {
+			"name": "YEAR",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRAND_SEG_TECH_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRAND_SEG_TECH_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "G_HIERARCHY_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "G_HIERARCHY_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DMR_PLAN_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DMR_PLAN_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "YTD_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "YTD_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "YEE_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "YEE_LSV",
+			"type": "Double"
+		}
+	}
+]

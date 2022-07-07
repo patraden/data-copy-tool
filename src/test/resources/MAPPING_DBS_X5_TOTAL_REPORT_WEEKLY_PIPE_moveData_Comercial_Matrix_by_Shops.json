@@ -1,0 +1,52 @@
+[
+	{
+		"source": {
+			"name": "DATE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DATE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CHAIN",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CHAIN",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SHOPNUMBER",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SHOPNUMBER",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLU",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLU",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLU_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLU_NAME",
+			"type": "String"
+		}
+	}
+]

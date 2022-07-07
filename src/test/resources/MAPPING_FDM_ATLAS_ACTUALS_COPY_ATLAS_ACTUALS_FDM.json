@@ -1,0 +1,262 @@
+[
+	{
+		"source": {
+			"name": "SOLD_TO_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SOLD_TO_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SOLD_TO_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SOLD_TO_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SHIP_TO_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SHIP_TO_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SHIP_TO_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SHIP_TO_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLIENT_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLIENT_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Technology",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Technology",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Category",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Category",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandTech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandTech",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Net_Weight",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "Net_Weight",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Qty_Cases",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "Qty_Cases",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsYear",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsYear",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriodName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriodName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "WeekDay",
+			"type": "String"
+		},
+		"sink": {
+			"name": "WeekDay",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OriginalDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "OriginalDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriodDay",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriodDay",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsDayFullName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsDayFullName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CalendarMonth",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CalendarMonth",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLANT_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLANT_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "RR",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "RR",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		}
+	}
+]

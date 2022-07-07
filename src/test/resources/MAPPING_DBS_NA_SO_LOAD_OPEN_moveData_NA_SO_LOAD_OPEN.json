@@ -1,0 +1,92 @@
+[
+	{
+		"source": {
+			"name": "Source_period",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Source_period",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chain_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Chain_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Shops",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Shops",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Chanel_ID",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Chanel_ID",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Value_type_ID",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Value_type_ID",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Value",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "Value",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Date",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "Date",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "Number_of_day",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Number_of_day",
+			"type": "Int32"
+		}
+	}
+]

@@ -1,0 +1,82 @@
+[
+	{
+		"source": {
+			"name": "__SKU_HASH_ROW__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SKU_ID",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__POS_HASH_ROW__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "POS_ID",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__PRICE_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "PRICE_ID",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "DAY",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "DAY",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "SELLOUT_ITEM",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SELLOUT_ITEM",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "SELLOUT_RSV",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SELLOUT_RSV",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__SKU_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SKU_CODE",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__POS_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "POS_CODE",
+			"type": "Decimal"
+		}
+	}
+]

@@ -1,0 +1,222 @@
+[
+	{
+		"source": {
+			"name": "ACTUAL_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_NSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_NSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_TONNES",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MARSPERIODNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MARSPERIODNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "G_HIERARCHY_ID",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "G_HIERARCHY_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "RKA_DIRECT_CLIENT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "RKA_DIRECT_CLIENT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_TE",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_TE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MARSYEAR",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "MARSYEAR",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "SEGMENT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SEGMENT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRAND",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRAND",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANDTECH",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANDTECH",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TECHNOLOGY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TECHNOLOGY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DPB_PLAN_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DPB_PLAN_TONNES",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DPB_PLAN_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DPB_PLAN_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DBP_PLAN_TI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DBP_PLAN_TI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DBP_PLAN_NSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DBP_PLAN_NSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "RKA_FLAG",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "RKA_FLAG",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		}
+	}
+]

@@ -1,0 +1,292 @@
+[
+	{
+		"source": {
+			"name": "MARSYEAR",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "MARSYEAR",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "MARSPERIODNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MARSPERIODNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CALENDARDAY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CALENDARDAY",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "WEEKDAY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "WEEKDAY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ORIGINALDATE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ORIGINALDATE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MARSPERIODAY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MARSPERIODAY",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "SEGMENT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SEGMENT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRAND",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRAND",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TECHNOLOGY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TECHNOLOGY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRAND_TECH",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRAND_TECH",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANDSEGTECH",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANDSEGTECH",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "G_HIERARCHY_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "G_HIERARCHY_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLIENT_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLANT_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLANT_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_NSV",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ACTUAL_NSV",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_TONNES",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DBP_PLAN_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DBP_PLAN_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DBP_PLAN_NSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DBP_PLAN_NSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DBP_PLAN_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DBP_PLAN_TONNES",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ACTUAL_QTY",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ACTUAL_QTY",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "OPENORD_LSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "OPENORD_LSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "OPENORD_TONNES",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "OPENORD_TONNES",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "OPENORD_NSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "OPENORD_NSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_CODE_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "RR",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "RR",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BRANDSEGTECHSUB",
+			"type": "String"
+		}
+	}
+]

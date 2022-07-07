@@ -1,0 +1,122 @@
+[
+	{
+		"source": {
+			"name": "CUSTOMER_OUTLET_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CUSTOMER_OUTLET_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ZREP",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "ZREP",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "CUSTOMERMATERIALNUMBER",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "CUSTOMERMATERIALNUMBER",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsWeekFullName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsWeekFullName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CUSTOMER_STOCK_EA",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "CUSTOMER_STOCK_EA",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER_RUR",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "TURNOVER_RUR",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "TURNOVER",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "IN_MATRIX",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IN_MATRIX",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER_Promo",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "TURNOVER_Promo",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER_No_Promo",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "TURNOVER_No_Promo",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER_RUR_Promo",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "TURNOVER_RUR_Promo",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "TURNOVER_RUR_No_Promo",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "TURNOVER_RUR_No_Promo",
+			"type": "Decimal"
+		}
+	}
+]

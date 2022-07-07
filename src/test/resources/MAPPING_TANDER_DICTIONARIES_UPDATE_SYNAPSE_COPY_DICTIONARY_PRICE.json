@@ -1,0 +1,92 @@
+[
+	{
+		"source": {
+			"name": "MaterialNumber",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PriceList_MaterialNumber",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ValidFrom",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "PriceList_ValidFrom",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "CurrencyName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PriceList_CurrencyName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Price",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "PriceList_Price",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "PriceVAT",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "PriceList_PriceVAT",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Type",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PriceList_Type",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DAY",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "DAY",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "__SKU_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SKU_CODE ",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__PRICE_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "PRICE_ID",
+			"type": "Decimal"
+		}
+	}
+]

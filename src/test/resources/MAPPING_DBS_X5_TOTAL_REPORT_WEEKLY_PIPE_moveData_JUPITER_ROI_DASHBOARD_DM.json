@@ -1,0 +1,1832 @@
+[
+	{
+		"source": {
+			"name": "MarsPeriodFullName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriodFullName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsYear",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsYear",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriod",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriod",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PromoID",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "PromoID",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "NA_RKA",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "NA_RKA",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "ClientGroup",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "ClientGroup",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Client",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Client",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Technology",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Technology",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Subrange",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Subrange",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsMechanic",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsMechanic",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsMechanicType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsMechanicType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Status",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Status",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Type",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Type",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Id",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Id",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DispatchesStart",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "DispatchesStart",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualInStoreDiscount",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualInStoreDiscount",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualInStoreShelfPrice",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualInStoreShelfPrice",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalCOGS",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalCOGS",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoTotalCost",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoTotalCost",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalMAC",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalMAC",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalEarnings",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalEarnings",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalEarnings",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalEarnings",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "DispatchesEnd",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "DispatchesEnd",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetROIPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetROIPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetUpliftPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetUpliftPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Calculating",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "Calculating",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "BlockInformation",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BlockInformation",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoBaselineBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoBaselineBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoBaselineBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoBaselineBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ColorId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ColorId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductSubrangesList",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductSubrangesList",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ClientTreeKeyId",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "ClientTreeKeyId",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "InOut",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "InOut",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalCOGS",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalCOGS",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalCOGS",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalCOGS",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Number",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Number",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoLSVByCompensation",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoLSVByCompensation",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanInStoreShelfPrice",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanInStoreShelfPrice",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoPostPromoEffectLSVW1",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoPostPromoEffectLSVW1",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoPostPromoEffectLSVW2",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoPostPromoEffectLSVW2",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoPostPromoEffectLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoPostPromoEffectLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoPostPromoEffectLSVW1",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoPostPromoEffectLSVW1",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoPostPromoEffectLSVW2",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoPostPromoEffectLSVW2",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoPostPromoEffectLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoPostPromoEffectLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "LoadFromTLC",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "LoadFromTLC",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "RejectReasonId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "RejectReasonId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "InOutProductIds",
+			"type": "String"
+		},
+		"sink": {
+			"name": "InOutProductIds",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "InOutExcludeAssortmentMatrixProductsButtonPressed",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "InOutExcludeAssortmentMatrixProductsButtonPressed",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "DocumentNumber",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DocumentNumber",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LastChangedDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "LastChangedDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "LastChangedDateDemand",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "LastChangedDateDemand",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "LastChangedDateFinance",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "LastChangedDateFinance",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "RegularExcludedProductIds",
+			"type": "String"
+		},
+		"sink": {
+			"name": "RegularExcludedProductIds",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "AdditionalUserTimestamp",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AdditionalUserTimestamp",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "IsGrowthAcceleration",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsGrowthAcceleration",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "PromoTypesId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PromoTypesId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EventId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "EventId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CreatorLogin",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CreatorLogin",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "IsOnInvoice",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsOnInvoice",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanTIBasePercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanTIBasePercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "InvoiceTotal",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "InvoiceTotal",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanCOGSPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanCOGSPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualTIBasePercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualTIBasePercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoLSVSI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoLSVSI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoLSVSO",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoLSVSO",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualCOGSPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualCOGSPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "IsApolloExport",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsApolloExport",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsMechanicId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsMechanicId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DeviationCoefficient",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "DeviationCoefficient",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "UseActualTI",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "UseActualTI",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "UseActualCOGS",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "UseActualCOGS",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "BudgetYear",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "BudgetYear",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanAddTIShopperApproved",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanAddTIShopperApproved",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanAddTIShopperCalculated",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanAddTIShopperCalculated",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanAddTIMarketingApproved",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanAddTIMarketingApproved",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualAddTIShopper",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualAddTIShopper",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualAddTIMarketing",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualAddTIMarketing",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductSubrangesListRU",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductSubrangesListRU",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsMechanicTypeId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsMechanicTypeId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanInstoreMechanicId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PlanInstoreMechanicId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanInstoreMechanicTypeId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PlanInstoreMechanicTypeId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Disabled",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "Disabled",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsMechanicDiscount",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "MarsMechanicDiscount",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "OtherEventName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OtherEventName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EventName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "EventName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ClientHierarchy",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ClientHierarchy",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductHierarchy",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductHierarchy",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CreatorId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CreatorId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsStartDate",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsStartDate",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsEndDate",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsEndDate",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsDispatchesStart",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsDispatchesStart",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsDispatchesEnd",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsDispatchesEnd",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DeletedDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "DeletedDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "ClientTreeId",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "ClientTreeId",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseClientTreeId",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "BaseClientTreeId",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Mechanic",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Mechanic",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MechanicIA",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MechanicIA",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseClientTreeIds",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BaseClientTreeIds",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LastApprovedDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "LastApprovedDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "TechnologyId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TechnologyId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NeedRecountUplift",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "NeedRecountUplift",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "IsAutomaticallyApproved",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsAutomaticallyApproved",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "IsCMManagerApproved",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsCMManagerApproved",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "IsDemandPlanningApproved",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsDemandPlanningApproved",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "IsDemandFinanceApproved",
+			"type": "Boolean"
+		},
+		"sink": {
+			"name": "IsDemandFinanceApproved",
+			"type": "Boolean"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoXSites",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoXSites",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCatalogue",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCatalogue",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoPOSMInClient",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoPOSMInClient",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCostProdXSites",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCostProdXSites",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCostProdCatalogue",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCostProdCatalogue",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCostProdPOSMInClient",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCostProdPOSMInClient",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoXSites",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoXSites",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCatalogue",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCatalogue",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandTechId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandTechId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoPOSMInClient",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoPOSMInClient",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCostProdXSites",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCostProdXSites",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCostProdCatalogue",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCostProdCatalogue",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCostProdPOSMInClient",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCostProdPOSMInClient",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "MechanicComment",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MechanicComment",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanInstoreMechanicDiscount",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanInstoreMechanicDiscount",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "CalendarPriority",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "CalendarPriority",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoTIShopper",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoTIShopper",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoTIMarketing",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoTIMarketing",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoBranding",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoBranding",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PromoStatusId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PromoStatusId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCost",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCost",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoBTL",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoBTL",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoCostProduction",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoCostProduction",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoUpliftPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoUpliftPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoROIPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoROIPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalMAC",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalMAC",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoTIShopper",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoTIShopper",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoTIMarketing",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoTIMarketing",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoBranding",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoBranding",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoBTL",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoBTL",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCostProduction",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCostProduction",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoCost",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoCost",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoUpliftPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoUpliftPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoROIPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoROIPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "StartDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "StartDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoNetIncrementalNSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoNetIncrementalNSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoIncrementalMAC",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoIncrementalMAC",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualInStoreMechanicId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ActualInStoreMechanicId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualInStoreMechanicTypeId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ActualInStoreMechanicTypeId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PromoDuration",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "PromoDuration",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "DispatchDuration",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "DispatchDuration",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "InvoiceNumber",
+			"type": "String"
+		},
+		"sink": {
+			"name": "InvoiceNumber",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoBaselineLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoBaselineLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalBaseTI",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalBaseTI",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "EndDate",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "EndDate",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalCOGS",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalCOGS",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoTotalCost",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoTotalCost",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetLSV",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalMAC",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalMAC",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoIncrementalEarnings",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoIncrementalEarnings",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetIncrementalEarnings",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetIncrementalEarnings",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetROIPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetROIPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "PlanPromoNetUpliftPercent",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "PlanPromoNetUpliftPercent",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "ActualPromoBaselineLSV",
+			"type": "Double"
+		},
+		"sink": {
+			"name": "ActualPromoBaselineLSV",
+			"type": "Double"
+		}
+	}
+]

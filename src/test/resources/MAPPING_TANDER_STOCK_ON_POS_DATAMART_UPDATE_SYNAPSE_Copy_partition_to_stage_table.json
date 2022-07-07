@@ -1,0 +1,209 @@
+[
+	{
+		"source": {
+			"name": "Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Name"
+		}
+	},
+	{
+		"source": {
+			"name": "CodeTT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Code"
+		}
+	},
+	{
+		"source": {
+			"name": "RC",
+			"type": "String"
+		},
+		"sink": {
+			"name": "RC"
+		}
+	},
+	{
+		"source": {
+			"name": "Branch",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Branch"
+		}
+	},
+	{
+		"source": {
+			"name": "City",
+			"type": "String"
+		},
+		"sink": {
+			"name": "City"
+		}
+	},
+	{
+		"source": {
+			"name": "AddressRegion",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AddressRegion"
+		}
+	},
+	{
+		"source": {
+			"name": "AddressCity",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AddressCity"
+		}
+	},
+	{
+		"source": {
+			"name": "RegionName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "RegionName"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductCode"
+		}
+	},
+	{
+		"source": {
+			"name": "MaterialCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MaterialCode"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductName"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand"
+		}
+	},
+	{
+		"source": {
+			"name": "Tech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Tech"
+		}
+	},
+	{
+		"source": {
+			"name": "SubBrand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SubBrand"
+		}
+	},
+	{
+		"source": {
+			"name": "Category",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Category"
+		}
+	},
+	{
+		"source": {
+			"name": "ProducerCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProducerCode"
+		}
+	},
+	{
+		"source": {
+			"name": "ProducerName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProducerName"
+		}
+	},
+	{
+		"source": {
+			"name": "TonWeight",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "TonWeight"
+		}
+	},
+	{
+		"source": {
+			"name": "NetWeight",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "NetWeight"
+		}
+	},
+	{
+		"source": {
+			"name": "WeightUnit",
+			"type": "String"
+		},
+		"sink": {
+			"name": "WeightUnit"
+		}
+	},
+	{
+		"source": {
+			"name": "Week",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Week"
+		}
+	},
+	{
+		"source": {
+			"name": "Year",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Year"
+		}
+	},
+	{
+		"source": {
+			"name": "StockRemains",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "StockRemains"
+		}
+	}
+]

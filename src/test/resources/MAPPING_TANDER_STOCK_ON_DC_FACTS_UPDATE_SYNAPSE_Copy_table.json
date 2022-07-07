@@ -1,0 +1,52 @@
+[
+	{
+		"source": {
+			"name": "__SKU_HASH_ROW__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SKU_ID",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "DC",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DC",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "WEEK",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "WEEK",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "STOCK",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "STOCK",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "__INGEST_TS__",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "INGEST_TIMESTAMP",
+			"type": "DateTime"
+		}
+	}
+]

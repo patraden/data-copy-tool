@@ -1,0 +1,72 @@
+[
+	{
+		"source": {
+			"name": "DATE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DATE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CHAIN",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CHAIN",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MACRONAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MACRONAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMAT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMAT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "UA",
+			"type": "String"
+		},
+		"sink": {
+			"name": "UA",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLU",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLU",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PLU_Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PLU_Name",
+			"type": "String"
+		}
+	}
+]

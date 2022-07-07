@@ -1,0 +1,62 @@
+[
+	{
+		"source": {
+			"name": "Shops",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Shops",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_ID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_ID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_Description",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_Description",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EA",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "EA",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "RSV",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "RSV",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "CalendarYearAndWeek",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CalendarYearAndWeek",
+			"type": "String"
+		}
+	}
+]

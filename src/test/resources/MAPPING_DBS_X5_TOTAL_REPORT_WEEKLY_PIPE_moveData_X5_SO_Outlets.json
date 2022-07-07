@@ -1,0 +1,492 @@
+[
+	{
+		"source": {
+			"name": "ADDRESSTEXT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ADDRESSTEXT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ALCOLICENSE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ALCOLICENSE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLOSEHOUR",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLOSEHOUR",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "COORDINATES",
+			"type": "String"
+		},
+		"sink": {
+			"name": "COORDINATES",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DIVISIONID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DIVISIONID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DIVISIONNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DIVISIONNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FIASCITY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FIASCITY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FIASREGION",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FIASREGION",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FIASSTREET",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FIASSTREET",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FIASSTREETGUID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FIASSTREETGUID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMATBYAREA",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMATBYAREA",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMATID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMATID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "AREA",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AREA",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMATNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMATNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "HOUSE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "HOUSE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "HOUSE2",
+			"type": "String"
+		},
+		"sink": {
+			"name": "HOUSE2",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL1",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL1",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL1NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL1NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL2",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL2",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL2NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL2NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL3",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL3",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "LEVEL3NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "LEVEL3NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MACROID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MACROID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ASSORTLEVEL",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ASSORTLEVEL",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MACRONAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MACRONAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NAMESHOP",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NAMESHOP",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NOTOBACCO",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NOTOBACCO",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OPENDATE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OPENDATE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OPENHOUR",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OPENHOUR",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "POSTCODE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "POSTCODE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "REGION",
+			"type": "String"
+		},
+		"sink": {
+			"name": "REGION",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "REGIONGUID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "REGIONGUID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "REGIONNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "REGIONNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SHOPNUMBER",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SHOPNUMBER",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CITY",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CITY",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "STATUS",
+			"type": "String"
+		},
+		"sink": {
+			"name": "STATUS",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "STATUSSALES",
+			"type": "String"
+		},
+		"sink": {
+			"name": "STATUSSALES",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "STREET",
+			"type": "String"
+		},
+		"sink": {
+			"name": "STREET",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TERRITORYID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TERRITORYID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TERRITORYNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TERRITORYNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TYPESHOP",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TYPESHOP",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CITYGENERATED",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CITYGENERATED",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CITYGUID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CITYGUID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLASTERID",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLASTERID",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLASTERNAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLASTERNAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CLOSEDATE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CLOSEDATE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MARS_REGION",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MARS_REGION",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMAT_1",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMAT_1",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FORMAT_2",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FORMAT_2",
+			"type": "String"
+		}
+	}
+]

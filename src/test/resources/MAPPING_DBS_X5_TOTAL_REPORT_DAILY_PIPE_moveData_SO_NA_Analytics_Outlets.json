@@ -1,0 +1,202 @@
+[
+	{
+		"source": {
+			"name": "Id",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Id",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DistributorId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Distributor.ENGName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Distributor.ENGName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsRegionId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsRegionId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsRegion.ENGName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsRegion.ENGName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Filial",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Filial",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Subname",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Subname",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OutletType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OutletType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "AddressCity",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AddressCity",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "AddressRegion",
+			"type": "String"
+		},
+		"sink": {
+			"name": "AddressRegion",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Disabled",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Disabled",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DeletedDate",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DeletedDate",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "IntId",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "IntId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Format2",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Format2",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Cluster",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Cluster",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "GLN",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GLN",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ChainId",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ChainId",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ChainSystemName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ChainSystemName",
+			"type": "String"
+		}
+	}
+]

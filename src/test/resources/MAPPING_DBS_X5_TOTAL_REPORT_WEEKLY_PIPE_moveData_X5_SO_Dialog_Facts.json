@@ -1,0 +1,252 @@
+[
+	{
+		"source": {
+			"name": "Period",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Period",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductGroup",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ProductGroup",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "RSV",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "RSV",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "EA",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "EA",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "KG_L",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "KG_L",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "\u0421hecksCount",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "\u0421hecksCount",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "StoresCount",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "StoresCount",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "ProductCount",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "ProductCount",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "AveragePriceEA",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "AveragePriceEA",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "AveragePriceKG_L",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "AveragePriceKG_L",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Average\u0421hecksVal",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "Average\u0421hecksVal",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Average\u0421hecksKG_L",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "Average\u0421hecksKG_L",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Average\u0421hecksEA",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "Average\u0421hecksEA",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "CategoryPenetration",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "CategoryPenetration",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "ShareCategory",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "ShareCategory",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "ShareStoresCategory",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "ShareStoresCategory",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "ShareProduct",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "ShareProduct",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalBuyersCount",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "LoyalBuyersCount",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalFreqCount",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "LoyalFreqCount",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalAverageVal",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "LoyalAverageVal",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalAverageEA",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "LoyalAverageEA",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalAverageKG_L",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "LoyalAverageKG_L",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "LoyalCategoryPenetration",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "LoyalCategoryPenetration",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "Store",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Store",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Region",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Region",
+			"type": "String"
+		}
+	}
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"source": {
+			"name": "SKU_NAME",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_NAME",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "__SKU_ID__",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "SKU_CODE",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "PRODUCER",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PRODUCER",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "__INGEST_TS__",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "INGEST_TIMESTAMP",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "Distributor_Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Distributor_Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Product_MatClientCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Product_MatClientCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Product_MatClientName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Product_MatClientName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_MaterialNumber",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_MaterialNumber",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_MaterialDescRu",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_MaterialDescRu",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_MaterialDescEn",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_MaterialDescEn",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_NetWeight",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_NetWeight",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_WeightUnit",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_WeightUnit",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_ZZCLF02Desc",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_ZZCLF02Desc",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_ZZCLF03Desc",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_ZZCLF03Desc",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_ZZCLF21Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_ZZCLF21Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_ZZCLF01Desc",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_ZZCLF01Desc",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_Manual",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_Manual",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Material_Tech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Material_Tech",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Producer_Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Producer_Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Producer_Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Producer_Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MIN_DAY",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "MIN_DAY",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "MAX_DAY",
+			"type": "DateTime"
+		},
+		"sink": {
+			"name": "MAX_DAY",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "ERROR_TYPE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ERROR_TYPE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "COMMENTS",
+			"type": "String"
+		},
+		"sink": {
+			"name": "COMMENTS",
+			"type": "String"
+		}
+	}
+]

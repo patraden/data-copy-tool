@@ -1,0 +1,472 @@
+[
+	{
+		"source": {
+			"name": "MATNR",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MATNR",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "VKORG",
+			"type": "String"
+		},
+		"sink": {
+			"name": "VKORG",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "VMSTD",
+			"type": "String"
+		},
+		"sink": {
+			"name": "VMSTD",
+			"type": "DateTime"
+		}
+	},
+	{
+		"source": {
+			"name": "0CREATEDON",
+			"type": "String"
+		},
+		"sink": {
+			"name": "0CREATEDON",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "0DIVISION",
+			"type": "String"
+		},
+		"sink": {
+			"name": "0DIVISION",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "0DIVISION___T",
+			"type": "String"
+		},
+		"sink": {
+			"name": "0DIVISION___T",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MATERIAL",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MATERIAL",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "0MATL_TYPE___T",
+			"type": "String"
+		},
+		"sink": {
+			"name": "0MATL_TYPE___T",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "0UNIT_OF_WT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "0UNIT_OF_WT",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "GGROSS_WT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GGROSS_WT",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "GNET_WT",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GNET_WT",
+			"type": "Double"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Segmen",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Segmen",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Technology",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Technology",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandTech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandTech",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandTech_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandTech_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Tech_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Tech_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ZREP",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ZREP",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EAN_Case",
+			"type": "String"
+		},
+		"sink": {
+			"name": "EAN_Case",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EAN_PC",
+			"type": "String"
+		},
+		"sink": {
+			"name": "EAN_PC",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand_Flag_abbr",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand_Flag_abbr",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand_Flag",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand_Flag",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Submark_Flag",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Submark_Flag",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Ingredient_variety",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Ingredient_variety",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Product_Category",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Product_Category",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Product_Type",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Product_Type",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Supply_Segment",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Supply_Segment",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Functional_variety",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Functional_variety",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Size",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Size",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand_essence",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand_essence",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Pack_Type",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Pack_Type",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Traded_unit_format",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Traded_unit_format",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Consumer_pack_format",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Consumer_pack_format",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "UOM_PC2Case",
+			"type": "String"
+		},
+		"sink": {
+			"name": "UOM_PC2Case",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Segmen_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Segmen_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandsegTech_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandsegTech_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "count",
+			"type": "String"
+		},
+		"sink": {
+			"name": "count",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brandsegtech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brandsegtech",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SubBrand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SubBrand",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SubBrand_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SubBrand_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandSegTechSub",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandSegTechSub",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandSegTechSub_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandSegTechSub_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseProduct",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BaseProduct",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseProduct_code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BaseProduct_code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SKU_RU",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SKU_RU",
+			"type": "String"
+		}
+	}
+]

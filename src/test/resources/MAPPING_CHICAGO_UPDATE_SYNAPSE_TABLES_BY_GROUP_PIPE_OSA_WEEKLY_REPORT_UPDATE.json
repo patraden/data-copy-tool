@@ -1,0 +1,812 @@
+[
+	{
+		"source": {
+			"name": "OutletId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "OutletId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "Code",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Code",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "CodeSWE",
+			"type": "String"
+		},
+		"sink": {
+			"name": "CodeSWE",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Name",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Name",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Address",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Address",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ExternalCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ExternalCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NetworkId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "NetworkId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "NetworkName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NetworkName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NetworkCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NetworkCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ExternalFormatId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "ExternalFormatId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "ExternalFormatCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ExternalFormatCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ExternalFormatName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ExternalFormatName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BranchNetworkId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "BranchNetworkId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "BranchNetworkName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BranchNetworkName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ChannelId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "ChannelId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "Channel",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Channel",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ChannelCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ChannelCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OutletTypeId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "OutletTypeId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "OutletTypeName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OutletTypeName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OutletTypeCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OutletTypeCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "GeoClusterId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "GeoClusterId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "GeoCluster",
+			"type": "String"
+		},
+		"sink": {
+			"name": "GeoCluster",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NA_RKA_SegmentationId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "NA_RKA_SegmentationId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "NA_RKA_Segmentation",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NA_RKA_Segmentation",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "SIPChannelId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "SIPChannelId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "SIPChannel",
+			"type": "String"
+		},
+		"sink": {
+			"name": "SIPChannel",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OSA_Zone",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OSA_Zone",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Demand_Region",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Demand_Region",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OSA_Format",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OSA_Format",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Region",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Region",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "City",
+			"type": "String"
+		},
+		"sink": {
+			"name": "City",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "OfficeId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "OfficeId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "OfficeName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "OfficeName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FilialId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "FilialId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "FilialName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FilialName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "ShipToCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "ShipToCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FilialRegion",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FilialRegion",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "FilialCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "FilialCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "DistributorId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DistributorCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DistributorName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorGRD",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DistributorGRD",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DistributorType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DistributorType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "NetworkTypeId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "NetworkTypeId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "NetworkType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "NetworkType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "HoldingId",
+			"type": "Int64"
+		},
+		"sink": {
+			"name": "HoldingId",
+			"type": "Int64"
+		}
+	},
+	{
+		"source": {
+			"name": "Holding",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Holding",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "DeliveryType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "DeliveryType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TOP_30_Food",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TOP_30_Food",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "TOP_30_PetCare",
+			"type": "String"
+		},
+		"sink": {
+			"name": "TOP_30_PetCare",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PositionEmployeeName_Level3",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PositionEmployeeName_Level3",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PositionEmployeeName_Level4",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PositionEmployeeName_Level4",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PositionEmployeeName_Level5",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PositionEmployeeName_Level5",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "EntryType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "EntryType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsWeek",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "MarsWeek",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsWeekName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsWeekName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriod",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "MarsPeriod",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriodName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriodName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsPeriodWeekName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MarsPeriodWeekName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MarsYear",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "MarsYear",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseProductCode",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BaseProductCode",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BaseProductName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BaseProductName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Technology",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Technology",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Brand",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Brand",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "BrandTech",
+			"type": "String"
+		},
+		"sink": {
+			"name": "BrandTech",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Segment",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Segment",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Division",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Division",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Period",
+			"type": "String"
+		},
+		"sink": {
+			"name": "Period",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "MerchandisingType",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MerchandisingType",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PositionEmployeeName_Level6",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PositionEmployeeName_Level6",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "PositionEmployeeName_Level7",
+			"type": "String"
+		},
+		"sink": {
+			"name": "PositionEmployeeName_Level7",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Plan",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Plan",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Fact",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Fact",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Facing",
+			"type": "Decimal"
+		},
+		"sink": {
+			"name": "Facing",
+			"type": "Decimal"
+		}
+	},
+	{
+		"source": {
+			"name": "MatrixName",
+			"type": "String"
+		},
+		"sink": {
+			"name": "MatrixName",
+			"type": "String"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_RecognitionError",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_RecognitionError",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_OutOfStock",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_OutOfStock",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_NotInMatrix",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_NotInMatrix",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_VirtualStock",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_VirtualStock",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_NotShelved",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_NotShelved",
+			"type": "Int32"
+		}
+	},
+	{
+		"source": {
+			"name": "Reason_NotSpecified",
+			"type": "Int32"
+		},
+		"sink": {
+			"name": "Reason_NotSpecified",
+			"type": "Int32"
+		}
+	}
+]
