@@ -62,7 +62,7 @@ class SparkParquetTableSourceTestSuit
     ).map(seq => assert(seq.sum == 14261L))
   }
 
-  test("copy large file") {
+  ignore("copy large file") {
     val schema = "public"
     val table = "tander_sales_competitors"
     val tableName = schema + "." + table

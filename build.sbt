@@ -22,19 +22,14 @@ val root = (project in file("."))
       exclude("com.typesafe.akka", "akka-protobuf-v3_2.13"),
     libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
     libraryDependencies += "org.postgresql" % "postgresql" % "42.3.4",
-    libraryDependencies += "org.apache.spark" %% "spark-core" % "3.2.1"
-      exclude("org.apache.zookeeper", "zookeeper")
-      exclude("commons-logging", "commons-logging")
-      excludeAll ExclusionRule(organization = "org.glassfish.jersey.containers")
-      excludeAll ExclusionRule(organization = "org.glassfish.jersey.core")
-      excludeAll ExclusionRule(organization = "org.glassfish.jersey.inject")
-      exclude("org.spark-project.spark", "unused"),
     libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.2.1"
       exclude("org.apache.zookeeper", "zookeeper")
       exclude("commons-logging", "commons-logging")
       excludeAll ExclusionRule(organization = "org.glassfish.jersey.containers")
       excludeAll ExclusionRule(organization = "org.glassfish.jersey.core")
       excludeAll ExclusionRule(organization = "org.glassfish.jersey.inject")
+      excludeAll ExclusionRule(organization = "net.razorvine")
+      excludeAll ExclusionRule(organization = "org.apache.ivy")
       exclude("org.spark-project.spark", "unused"),
     libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12" % "test",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test",
