@@ -1,13 +1,10 @@
 package dct
 
 import akka.stream.alpakka.slick.scaladsl.SlickSession
-import dct.cli.CLIConfig
 import dct.slick.defaultDBConfig
 import org.scalatest.BeforeAndAfterAll
-import org.scalatest.funsuite.{AnyFunSuite, AsyncFunSuite}
-
+import org.scalatest.funsuite.AnyFunSuite
 import java.net.{URLDecoder => decoder}
-import scala.concurrent.Future
 
 class DctTestSuite extends AnyFunSuite with BeforeAndAfterAll {
 

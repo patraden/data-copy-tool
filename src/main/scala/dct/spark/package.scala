@@ -21,7 +21,7 @@ package object spark {
   System.setProperty("spark.executor.memory", "512m")
   System.setProperty("spark.sql.codegen.wholeStage","false")
   lazy val spark: SparkSession =
-    SparkSession.builder.config(new SparkConf(true)).getOrCreate()
+    SparkSession.builder().config(new SparkConf(true)).getOrCreate()
 
   implicit val sparkSchemaOrdering: Ordering[StructField] =
     (x: StructField, y: StructField) => {

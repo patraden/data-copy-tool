@@ -19,10 +19,8 @@ class SparkParquetTableTestSuit extends AnyFunSuite with BeforeAndAfterAll {
       decode(getClass.getResource("/").
         getPath, "UTF-8")
 
-    // keeping it out of project resources due to size
-    val largeParquetFilePath =
-      "C:\\Users\\patraden\\OneDrive - Mars Inc\\Documents\\DevProjects\\" +
-        "TANDER_SALES_COMPETITORS.large.parquet"
+    // Keep it aside if size is substantial
+    val largeParquetFilePath = "/Users/patraden/Downloads/TANDER_SALES_COMPETITORS.large.parquet"
 
     testParquetFiles = new java.io.File(testResourceRoot).
       listFiles.

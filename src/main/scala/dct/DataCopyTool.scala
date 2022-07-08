@@ -1,8 +1,7 @@
 package dct
 
 object DataCopyTool extends App {
-  import dct.cli.CLIConfig
-  CLIConfig(args) match {
+  CLIConfig(args.toIndexedSeq) match {
     case null => System.exit(-1)
     case CLIConfig(mode, table, parquet, adfmap, url) =>
       mode match {

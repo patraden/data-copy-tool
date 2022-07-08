@@ -1,4 +1,4 @@
-package dct.cli
+package dct
 
 import scopt.OParser
 import dct.spark.hadoopDirExists

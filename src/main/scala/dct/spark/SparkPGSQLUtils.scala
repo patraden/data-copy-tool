@@ -8,6 +8,7 @@ import scala.util.Try
 
 //TODO initiate logger as instance into val
 //TODO maximum code reuse from JdbcUtils
+
 object SparkPGSQLUtils extends Logger {
 
   private val url = "jdbc:postgresql"
@@ -25,8 +26,8 @@ object SparkPGSQLUtils extends Logger {
 
     val sql =
       s"""
-         |INSERT INTO ${targetTableName} (${columnNames})
-         |SELECT ${columnNames} FROM ${sourceTableName}
+         |INSERT INTO $targetTableName ($columnNames)
+         |SELECT $columnNames FROM $sourceTableName
          |""".stripMargin
     executeStatement(sql)
   }
@@ -35,7 +36,7 @@ object SparkPGSQLUtils extends Logger {
                         oldSchema: String,
                         newSchema: String)
                        (implicit conn: Connection): Unit = {
-    val sql = s"ALTER TABLE ${oldSchema}.${tableName} set schema ${newSchema}"
+    val sql = s"ALTER TABLE $oldSchema.$tableName set schema $newSchema"
     executeStatement(sql)
   }
 
@@ -54,11 +55,7 @@ object SparkPGSQLUtils extends Logger {
       logInfo(s"""Executed query: $sql""")
     } catch {
       case e: SQLException =>
-        logError(
-          s"""Failed to execute query: $sql
-             |due to ${e.getErrorCode}: ${e.getMessage}
-             |""".stripMargin
-        )
+        logError(s"""Failed to execute query: $sql due to ${e.getErrorCode}: $e.getMessage""".stripMargin)
         throw e
     }
     finally {
@@ -116,10 +113,7 @@ object SparkPGSQLUtils extends Logger {
                (implicit conn: Connection): Unit = {
     try executeStatement(s"DROP TABLE $tableName")
     catch {case _: SQLException =>
-      logInfo(
-        s"""Apparently $tableName does not exists.
-           |Thus there is nothing to drop""".stripMargin
-      )
+      logInfo(s"""Apparently $tableName does not exists.Thus there is nothing to drop""")
     }
   }
 
@@ -136,18 +130,14 @@ object SparkPGSQLUtils extends Logger {
         Some(JdbcUtils.getSchema(statement.executeQuery(), dialect))
       } catch {
         case e: SQLException =>
-          logWarning(
-            s"""Failed to execute query: $sql
-               |due to: ${e.getMessage}
-               |""".stripMargin
-          )
+          logWarning(s"""Failed to execute query: $sql due to: $e.getMessage""")
           None
       } finally {
         statement.close()
       }
     } catch {
       case e: SQLException =>
-        logWarning(s"""Failed to get schema for $tableName due to: ${e.getMessage}""")
+        logWarning(s"""Failed to get schema for $tableName due to: $e.getMessage""")
         None
     }
   }

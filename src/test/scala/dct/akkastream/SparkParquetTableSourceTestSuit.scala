@@ -2,10 +2,10 @@ package dct.akkastream
 
 import akka.stream.alpakka.slick.javadsl.SlickSession
 import dct.slick.{ConnectionProvider, defaultDBConfig}
-import org.scalatest.funsuite.AsyncFunSuite
-import org.scalatest._
-import dct.spark.SparkParquetTable
 import dct.spark.SparkPGSQLUtils._
+import dct.spark.SparkParquetTable
+import org.scalatest._
+import org.scalatest.funsuite.AsyncFunSuite
 
 import java.net.{URLDecoder => decoder}
 import java.sql.Connection
@@ -14,7 +14,7 @@ import scala.concurrent.Future
 class SparkParquetTableSourceTestSuit
   extends AsyncFunSuite with BeforeAndAfterAll {
 
-  implicit val session = SlickSession.forConfig(defaultDBConfig)
+  implicit val session: SlickSession = SlickSession.forConfig(defaultDBConfig)
   @transient implicit val provider: ConnectionProvider = ConnectionProvider()
   @transient implicit var conn: Connection = _
   @transient var testParquetFiles: Array[String] = _
@@ -29,10 +29,8 @@ class SparkParquetTableSourceTestSuit
       decode(getClass.getResource("/").
         getPath, "UTF-8")
 
-    // keeping it out of project resources due to size
-    val largeParquetFilePath =
-      "C:\\Users\\patraden\\OneDrive - Mars Inc\\Documents\\DevProjects\\" +
-      "TANDER_SALES_COMPETITORS.large.parquet"
+    // Keep it aside if size is substantial
+    val largeParquetFilePath = "/Users/patraden/Downloads/TANDER_SALES_COMPETITORS.large.parquet"
 
     testParquetFiles = new java.io.File(testResourceRoot).
       listFiles.
@@ -45,8 +43,8 @@ class SparkParquetTableSourceTestSuit
     provider.release(None)
   }
 
-  ignore("copy small file") {
-    val schema = "test"
+  test("copy small file") {
+    val schema = "public"
     val table = "tander_dictionaries"
     val tableName = schema + "." + table
     val paths = testParquetFiles.filter(p => p.contains(table.toUpperCase)).toSeq
@@ -64,8 +62,8 @@ class SparkParquetTableSourceTestSuit
     ).map(seq => assert(seq.sum == 14261L))
   }
 
-  ignore("copy large file") {
-    val schema = "test"
+  test("copy large file") {
+    val schema = "public"
     val table = "tander_sales_competitors"
     val tableName = schema + "." + table
     val paths = testParquetFiles.filter(p => p.contains(table.toUpperCase)).toSeq
@@ -85,12 +83,12 @@ class SparkParquetTableSourceTestSuit
   }
 
   ignore("Copy small table within a db") {
-    PGCopyTableStream("test.tander_dictionaries", "test.tander_dictionaries_copy").
+    PGCopyTableStream("public.tander_dictionaries", "dct_test.tander_dictionaries_copy").
       buildStream().run().map(res => assert(res == 14261L))
   }
 
-  test("Copy large table within a db") {
-    PGCopyTableStream("test.tander_sales_competitors", "test.tander_sales_competitors_copy").
+  ignore("Copy large table within a db") {
+    PGCopyTableStream("public.tander_sales_competitors", "dct_test.tander_sales_competitors_copy").
       buildStream().run().map(res => assert(res == 6561046L))
   }
 }

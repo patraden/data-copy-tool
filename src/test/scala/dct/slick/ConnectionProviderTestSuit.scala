@@ -1,8 +1,9 @@
 package dct.slick
 
-import org.scalatest.funsuite.AnyFunSuite
 import akka.stream.alpakka.slick.scaladsl.SlickSession
-import com.typesafe.config.{ConfigFactory, ConfigValueFactory}
+import com.typesafe.config.ConfigValueFactory
+import org.scalatest.funsuite.AnyFunSuite
+
 import java.sql.{SQLException, SQLTransientConnectionException}
 
 class ConnectionProviderTestSuit

@@ -1,15 +1,13 @@
 package dct.spark
 
-import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest._
-
 import java.sql.Connection
-import dct.slick.{ConnectionProvider, defaultDBConfig}
-import org.apache.spark.sql.types._
-import SparkPGSQLUtils._
-import akka.stream.alpakka.slick.scaladsl.SlickSession
-
 import scala.util.{Failure, Success}
+import akka.stream.alpakka.slick.scaladsl.SlickSession
+import dct.slick.{ConnectionProvider, defaultDBConfig}
+import dct.spark.SparkPGSQLUtils._
+import org.apache.spark.sql.types._
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.funsuite.AnyFunSuite
 
 class SparkPGSQLUtilsTestSuit
   extends AnyFunSuite with BeforeAndAfterAll {
@@ -17,9 +15,9 @@ class SparkPGSQLUtilsTestSuit
   @transient implicit var connection: Connection = _
   implicit val session: SlickSession = SlickSession.forConfig(defaultDBConfig)
   @transient val connProvider: ConnectionProvider = ConnectionProvider()
-  @transient val schemaName: String = "test"
-  @transient val newSchemaName: String = "public"
-  @transient val tableName: String = "dct_test_table"
+  @transient val oldSchemaName: String = "public"
+  @transient val oldTableName: String = "dct_test_table"
+  @transient val newSchemaName: String = "dct_test"
   @transient val newTableName: String = "dct_test_table_renamed"
   @transient val schema: StructType =
     StructType(
@@ -54,17 +52,16 @@ class SparkPGSQLUtilsTestSuit
   }
 
   test("drop table") {
-    dropTable(schemaName + "." + tableName)
+    dropTable(oldSchemaName + "." + oldTableName)
     dropTable(newSchemaName + "." + newTableName)
   }
 
   test("create table") {
-    createTable(schemaName + "." + tableName, Option(schema))
+    createTable(oldSchemaName + "." + oldTableName, Option(schema))
   }
 
-  ignore("change table schema") {
-    changeTableSchema(tableName, schemaName, newSchemaName)
-    dropTable(newSchemaName + "." + tableName)
+  test("change table schema") {
+    changeTableSchema(oldTableName, oldSchemaName, newSchemaName)
   }
 
   ignore("insert table into table") {
@@ -73,20 +70,20 @@ class SparkPGSQLUtilsTestSuit
       "test.tander_sales_competitors_copy")
   }
 
-  ignore("get table schema") {
-    val schemaOpt = getSchemaOption(schemaName + "." + tableName)
+  test("get table schema") {
+    val schemaOpt = getSchemaOption(newSchemaName + "." + oldTableName)
     val derivedSchema = schemaOpt.getOrElse(new StructType())
     assert(!(schema !=== derivedSchema))
   }
 
-  ignore("rename table") {
-    renameTable(tableName, newTableName)
-    assertResult(true)(tableExists(newTableName))
-    assertResult(false)(tableExists(tableName))
+  test("rename table") {
+    renameTable(newSchemaName + "." + oldTableName, newTableName)
+    assertResult(true)(tableExists(newSchemaName + "." + newTableName))
+    assertResult(false)(tableExists(newSchemaName + "." + oldTableName))
   }
 
-  ignore("truncate table") {
-    truncateTable(newTableName)
+  test("truncate table") {
+    truncateTable(newSchemaName + "." + newTableName)
   }
 
 }
