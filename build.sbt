@@ -45,12 +45,6 @@ Compile / resourceDirectory := baseDirectory.value / "src" / "main" / "resources
 Compile / unmanagedClasspath += baseDirectory.value / "src" / "main" / "resources"
 
 /**
- * shell script to be prepend to uber jar.
- */
-import sbtassembly.AssemblyPlugin.defaultShellScript
-ThisBuild / assemblyPrependShellScript := Some(defaultShellScript)
-
-/**
  * Removing unnecessary files.
  */
 ThisBuild / assemblyMergeStrategy  := {
