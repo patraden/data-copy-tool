@@ -72,7 +72,7 @@ class SparkParquetTableToPGCopyStream(val table: SparkParquetTable)
       ClosedShape
   }).named(name)
 
-  def buildStreams: Seq[RunnableGraph[Seq[Future[Long]]]] =
+  def buildStreams(): Seq[RunnableGraph[Seq[Future[Long]]]] =
     sparkRowSources.map{
       case (index, src) => singleStream(src, s"PG Copy stream $index")
     }.toSeq

@@ -58,7 +58,7 @@ class SparkParquetTableSourceTestSuit
       truncateTable(tableName)
 
     Future.sequence(
-      SparkParquetTableToPGCopyStream(sparkTable).buildStreams.flatMap(_.run())
+      SparkParquetTableToPGCopyStream(sparkTable).buildStreams().flatMap(_.run())
     ).map(seq => assert(seq.sum == 14261L))
   }
 
@@ -77,7 +77,7 @@ class SparkParquetTableSourceTestSuit
       truncateTable(tableName)
 
     Future.sequence(
-      SparkParquetTableToPGCopyStream(sparkTable).buildStreams.flatMap(_.run())
+      SparkParquetTableToPGCopyStream(sparkTable).buildStreams().flatMap(_.run())
     ).map(seq => assert(seq.sum == 6561046L))
 
   }
