@@ -10,15 +10,13 @@ import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.sql.types._
 
 /**
- * ADF json mapping file deserializer and converter to [[StructType]]
- * @param path hdfs path to mapping file
+ * ADF json mapping file converter and deserializer to spark sql [[StructType]].
+ * @param path hdfs path to json mapping file.
  */
 
-//TODO get read of extension of Logger, make it through val
-case class ADFMapping(path: String)
-  extends Logger{
+case class ADFMapping(path: String) extends Logger{
 
-  implicit val jsonFormats: DefaultFormats.type = DefaultFormats
+  implicit private val jsonFormats: DefaultFormats.type = DefaultFormats
 
   private def content: String = {
     val hdfs = FileSystem.get(new Configuration())
@@ -41,17 +39,24 @@ case class ADFMapping(path: String)
     } catch {
       case _: Exception =>
         logWarning(
-          s""" Failed to parse ADF mapping json.
-             | Please ensure mapping structure is correct: $content
-             | """.stripMargin)
+          s""" Failed to parse ADF mapping json.Please ensure mapping structure is correct: $content"""
+        )
         List.empty[Map[String, Map[String, String]]]
     }
   }
 
+  /**
+   * Source to Sink column name [[Map]].
+   * Key = source column name
+   * Val = sink column name.
+   */
   val aliasMap: Map[String, String] =
     adfMap.map(m => (m("source")("name"), m("sink")("name"))).toMap
 
-  val mappingSchema: Option[StructType] =
+  /**
+   * ADF mapping schema deserialized into spark sql [[StructType]]
+   */
+  val mappingSchemaAsStructType: Option[StructType] =
     if (adfMap.isEmpty)
       None
     else {
@@ -79,9 +84,8 @@ case class ADFMapping(path: String)
                   case "String" => StringType
                   case t =>
                     logWarning(
-                      s"""Unknown ADF sink column type $t.
-                         |Spark StringType will be applied in sink schema.
-                         |""".stripMargin)
+                      s"""Unknown ADF sink column type $t.Spark StringType will be applied in sink schema."""
+                    )
                     StringType
                 }
               )

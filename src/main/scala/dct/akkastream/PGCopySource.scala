@@ -1,19 +1,24 @@
 package dct.akkastream
 
 import dct.slick.ConnectionProvider
+import dct.spark.Logger
+import dct.spark.SparkPGSQLUtils.getSchemaOption
+import org.postgresql.copy.CopyOut
 import akka.stream.alpakka.slick.scaladsl.SlickSession
 import akka.stream.scaladsl.Source
 import akka.stream.{ActorAttributes, Attributes, Outlet, SourceShape}
 import akka.stream.stage.{GraphStageLogic, GraphStageWithMaterializedValue, OutHandler}
 import akka.util.ByteString
-import dct.spark.Logger
-import dct.spark.SparkPGSQLUtils.getSchemaOption
-import org.postgresql.copy.CopyOut
-
 import java.sql.Connection
 import scala.concurrent.{Future, Promise}
 import scala.util.{Failure, Success, Try}
 
+/**
+ * COPY based source which returns count of rows copied in metadata.
+ * See also [[https://www.postgresql.org/docs/current/sql-copy.html PostgreSQL COPY]]
+ * @param query COPY query.
+ * @param session SlickSession object for DB connectivity.
+ */
 class PGCopySource(query: String)(implicit val session: SlickSession)
   extends GraphStageWithMaterializedValue[SourceShape[ByteString], Future[Long]] {
 
@@ -38,7 +43,7 @@ class PGCopySource(query: String)(implicit val session: SlickSession)
           }
           Option(copyOut.readFromCopy())
             .map { bytes =>
-              rowsCopied += 1L //bytes.length for original val = bytesCopied
+              rowsCopied += 1L
               ByteString(bytes)
             }
         } match {
@@ -85,37 +90,38 @@ class PGCopySource(query: String)(implicit val session: SlickSession)
 object PGCopySource extends Logger {
 
   /**
-   * Spark schema based constructor.
-   * @param tableName
-   * @param session
+   * Constructor which derives full set of columns to copy from.
+   * @param tableName full postreSQL table name.
+   * @param session SlickSession object for DB connectivity
    * @return
    */
   def apply(tableName: String)
            (implicit session: SlickSession): Source[ByteString, Future[Long]] = {
-    val connTry = ConnectionProvider().acquireBase()
-    implicit val conn: Connection = if (connTry.isSuccess) connTry.get else null.asInstanceOf[Connection]
+    val provider = ConnectionProvider()
+    implicit val conn: Connection =
+      if (provider.acquireBase().isSuccess) provider.acquireBase().get
+      else null.asInstanceOf[Connection]
     val columnNames = getSchemaOption(tableName).get.map(f => s"""\"${f.name}\"""")
+    provider.release(None)
     this.apply(tableName, columnNames)
   }
 
   /**
-   * Base constructor.
-   * @param tableName
-   * @param columnNames
-   * @param session
-   * @return
+   * Base constructor based on specific subset of source columns.
+   * @param tableName full postreSQL table name.
+   * @param columnNames [[Seq]] of column to copy from.
+   * @param session SlickSession object for DB connectivity
    */
   def apply(tableName: String, columnNames: Seq[String])
            (implicit session: SlickSession): Source[ByteString, Future[Long]] = {
     val attr = Attributes.name(s"${tableName}_PGCOPY_SOURCE") and ActorAttributes.IODispatcher
-    val query = s"""COPY (SELECT ${columnNames.mkString(",")} FROM ${tableName}) TO STDOUT"""
+    val query = s"""COPY (SELECT ${columnNames.mkString(",")} FROM $tableName) TO STDOUT"""
     val source = Source.
       fromGraph(new PGCopySource(query)).
       withAttributes(attr)
     logInfo(
-      s"""Built copy source for sql table ${tableName}
-         |with query = $query
-         |""".stripMargin)
+      s"""Built copy source for sql table $tableName with query = $query"""
+    )
     source
   }
 }

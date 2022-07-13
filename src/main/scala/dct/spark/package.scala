@@ -7,10 +7,19 @@ import org.apache.hadoop.fs.FileSystem
 import org.apache.hadoop.fs.Path
 
 package object spark {
-  class PGSQLException(val message: String, val cause: Throwable)
-    extends Exception(message, cause)
+  /**
+   * Spark utility trait for classes that want to log data. Creates a SLF4J logger for the class and allows
+   * logging messages at different levels using methods that only evaluate parameters lazily if the
+   * log level is enabled.
+   */
+  trait Logger extends org.apache.spark.internal.Logging
 
-  val MAX_PARALLELISM = 8
+  class PGSQLException(val message: String, val cause: Throwable) extends Exception(message, cause)
+
+  /**
+   *
+   */
+  val MAX_PARQUET_READ_PARALLELISM = 8
 
   //TODO move this to application.conf
   System.setProperty("spark.app.name", "data copy tool")

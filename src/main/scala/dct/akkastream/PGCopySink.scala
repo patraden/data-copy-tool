@@ -1,20 +1,25 @@
 package dct.akkastream
 
-// https://jdbc.postgresql.org/documentation/publicapi/org/postgresql/copy/package-summary.html
-
+import dct.slick.ConnectionProvider
+import dct.spark.Logger
+import org.apache.spark.sql.types.StructType
+import org.postgresql.copy.CopyIn
 import akka.stream.alpakka.slick.scaladsl.SlickSession
 import akka.stream.scaladsl.Sink
 import akka.stream.stage.{GraphStageLogic, GraphStageWithMaterializedValue, InHandler}
 import akka.stream.{ActorAttributes, Attributes, Inlet, SinkShape}
 import akka.util.ByteString
-import dct.slick.ConnectionProvider
-import dct.spark.Logger
-import org.apache.spark.sql.types.StructType
-import org.postgresql.copy.CopyIn
 
 import scala.concurrent.{Future, Promise}
 import scala.util.{Failure, Success, Try}
 
+/**
+ * COPY based sink which returns count of rows copied in metadata.
+ * See also [[https://www.postgresql.org/docs/current/sql-copy.html PostgreSQL COPY]]
+ * @param query COPY query.
+ * @param session SlickSession object for DB connectivity.
+ * @param maxInitialBufferSize Sink won't start until initial buffer is filled.
+ */
 class PGCopySink(query: String, maxInitialBufferSize: Long = 0L)
                 (implicit val session: SlickSession)
   extends GraphStageWithMaterializedValue[SinkShape[ByteString], Future[Long]] {
@@ -115,7 +120,11 @@ class PGCopySink(query: String, maxInitialBufferSize: Long = 0L)
 object PGCopySink extends Logger {
 
   /**
-   * Spark schema based constructor.
+   * Spark sql schema [[StructType]] based constructor.
+   * @param tableName full postreSQL table name.
+   * @param schema spark sql schema.
+   * @param session SlickSession object for DB connectivity
+   * @return
    */
   def apply(tableName: String, schema: StructType)
            (implicit session: SlickSession): Sink[ByteString, Future[Long]] = {
@@ -125,6 +134,9 @@ object PGCopySink extends Logger {
 
   /**
    * Base constructor.
+   * @param tableName full postreSQL table name.
+   * @param columnNames [[Seq]] of column to copy into.
+   * @param session SlickSession object for DB connectivity
    */
   def apply(tableName: String, columnNames: Seq[String])
            (implicit session: SlickSession): Sink[ByteString, Future[Long]] = {

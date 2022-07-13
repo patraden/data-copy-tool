@@ -182,6 +182,6 @@ abstract class ParquetToPGStream(targetTable: String,
     new SparkParquetTable(
       temporaryTable,
       Seq(parquetPath),
-      adfMapping.flatMap(path => ADFMapping(path).mappingSchema).orElse(None)
+      adfMapping.flatMap(path => ADFMapping(path).mappingSchemaAsStructType).orElse(None)
     )
 }

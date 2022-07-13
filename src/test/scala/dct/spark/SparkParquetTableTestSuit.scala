@@ -103,7 +103,7 @@ class SparkParquetTableTestSuit extends AnyFunSuite with BeforeAndAfterAll {
 
     val tableName = "DICTIONARY_POS"
     val mapFilePath = testMapFiles.filter(_.contains(tableName)).head
-    val adfMap = ADFMapping(mapFilePath).mappingSchema
+    val adfMap = ADFMapping(mapFilePath).mappingSchemaAsStructType
 
     val parquetFilePath = testParquetFiles.
       filter(p => p.contains(tableName) && p.contains("small")).

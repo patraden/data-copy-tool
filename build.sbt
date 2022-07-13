@@ -1,3 +1,6 @@
+enablePlugins(DockerPlugin)
+enablePlugins(UniversalPlugin)
+
 scalacOptions ++= Seq(
     "-encoding", "utf8", // Option and arguments on same line
     "-Xfatal-warnings",  // New lines for each options
@@ -14,8 +17,11 @@ ThisBuild / scalaVersion := "2.13.8"
 val root = (project in file("."))
   .settings(
     name := "data-copy-tool",
+
     assembly / mainClass := Some("dct.DataCopyTool"),
     assembly / logLevel := Level.Info,
+    assembly / assemblyJarName := "data_copy_tool_fat.jar",
+
     libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.19"
       exclude("com.typesafe.akka", "akka-protobuf-v3_2.13"),
     libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "3.0.4"
@@ -40,7 +46,8 @@ Compile / resourceDirectory := baseDirectory.value / "src" / "main" / "resources
 Compile / unmanagedClasspath += baseDirectory.value / "src" / "main" / "resources"
 
 /**
- * Removing unnecessary files.
+ * Assembly plugin settings.
+ * (just removing unnecessary meta files)
  */
 ThisBuild / assemblyMergeStrategy  := {
     case PathList("module-info.class") => MergeStrategy.discard
@@ -51,3 +58,11 @@ ThisBuild / assemblyMergeStrategy  := {
         val oldStrategy = (ThisBuild / assemblyMergeStrategy).value
         oldStrategy(x)
 }
+
+/**
+ * DockerFile settings.
+ */
+Docker / packageName := packageName.value
+Docker / daemonUser := "dctuser"
+Docker / daemonUserUid := None
+Docker / dockerExposedPorts := Seq(9000, 9443)

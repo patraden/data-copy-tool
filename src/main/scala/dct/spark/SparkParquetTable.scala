@@ -67,7 +67,7 @@ class SparkParquetTable(
     schema
   }
 
-  def parallelism: Int = MAX_PARALLELISM min
+  def parallelism: Int = MAX_PARQUET_READ_PARALLELISM min
     parquetBlocksMetaData.
       groupBy { case (status, _) => status}.
       map { case (_, v) => v.length }.iterator.max

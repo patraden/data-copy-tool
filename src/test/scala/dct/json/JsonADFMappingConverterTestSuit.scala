@@ -14,7 +14,7 @@ class JsonADFMappingConverterTestSuit extends AnyFunSuite {
     map(_.getPath)
 
   test("deserialize all adf map files") {
-    assertResult(41)(testMapFiles.map(ADFMapping(_).mappingSchema).length)
+    assertResult(41)(testMapFiles.map(ADFMapping(_).mappingSchemaAsStructType).length)
   }
 
   test("print map aliases") {
