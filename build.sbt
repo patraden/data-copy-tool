@@ -1,6 +1,3 @@
-enablePlugins(DockerPlugin)
-enablePlugins(UniversalPlugin)
-
 scalacOptions ++= Seq(
     "-encoding", "utf8", // Option and arguments on same line
     "-Xfatal-warnings",  // New lines for each options
@@ -20,7 +17,6 @@ val root = (project in file("."))
 
     assembly / mainClass := Some("dct.DataCopyTool"),
     assembly / logLevel := Level.Info,
-    assembly / assemblyJarName := "data_copy_tool_fat.jar",
 
     libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.6.19"
       exclude("com.typesafe.akka", "akka-protobuf-v3_2.13"),
@@ -58,11 +54,3 @@ ThisBuild / assemblyMergeStrategy  := {
         val oldStrategy = (ThisBuild / assemblyMergeStrategy).value
         oldStrategy(x)
 }
-
-/**
- * DockerFile settings.
- */
-Docker / packageName := packageName.value
-Docker / daemonUser := "dctuser"
-Docker / daemonUserUid := None
-Docker / dockerExposedPorts := Seq(9000, 9443)
