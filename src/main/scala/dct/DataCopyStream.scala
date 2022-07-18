@@ -1,31 +1,29 @@
 package dct
 
+import scala.concurrent.{ExecutionContext, Future}
+import scala.util.{Failure, Success, Try}
 import akka.actor.ActorSystem
 import akka.stream.alpakka.slick.javadsl.SlickSession
 import akka.stream.scaladsl.RunnableGraph
-import dct.akkastream.SparkParquetTableToPGCopyStream
+import dct.akkastreams.SparkParquetToPGTableStream
 import dct.json.ADFMapping
 import dct.slick.ConnectionProvider
-import dct.spark.SparkParquetTable
-
-import java.sql.Connection
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success, Try}
+import dct.spark.{Logger, SparkParquetTable}
 
 /**
  * Super class for command line copy scenarios end to end.
  * The core in a scenario is a set of akka streams [[RunnableGraph]] which perform copy itself.
  * @tparam V - akka stream materialized value type.
- * @tparam S - akka stream closed shape [[RunnableGraph]] extension.
+ * @tparam Mat - akka stream closed shape [[RunnableGraph]] extension.
  */
 
-abstract class DataCopyStream[V, S <: RunnableGraph[Seq[Future[V]]]] extends dct.spark.Logger {
+abstract class DataCopyStream[V, Mat] extends Logger {
   implicit val sys: ActorSystem
   implicit val ex: ExecutionContext
 
-  val streams: Try[Seq[S]]
+  val streams: Try[Seq[RunnableGraph[Mat]]]
   val expectedMetaData: Try[V]
-  val matValuesAggregator: Seq[V] => V
+  val matValuesAggregator: Seq[Mat] => Future[V]
 
   /**
    * Abstract method encapsulating steps to be executed prior to data streaming between Source and Sink.
@@ -96,16 +94,17 @@ abstract class DataCopyStream[V, S <: RunnableGraph[Seq[Future[V]]]] extends dct
   )
 
   private def streaming(): Future[Unit] =
-    Future.
-      sequence(streams.get.flatMap(_.run())).
-      map(matValuesAggregator).
-      map{value =>
+    matValuesAggregator {
+      streams.get.map(_.run())
+    }.map {
+      value =>
         if (value == expectedMetaData.get) logInfo(s"Successfully copied $value rows")
-        else throw new StreamMetaDataAssertionException(value.toString, expectedMetaData.get.toString)}.
-      recover{ case e: Exception =>
+        else throw new StreamMetaDataAssertionException(value.toString, expectedMetaData.get.toString)
+    }.recover {
+      case e: Exception =>
         logError("Streaming stage failure")
         throw new StreamException(e.getMessage, e.getCause)
-      }
+    }
 
   private def afterStream(): Future[Unit] = Future(doAfterStreaming())
 
@@ -138,10 +137,10 @@ abstract class ParquetToPGStream(targetTable: String,
                                  parquetPath: String,
                                  adfMapping: Option[String],
                                  jdbcURL: Option[String]
-                                ) extends DataCopyStream[Long, RunnableGraph[Seq[Future[Long]]]] {
+                                ) extends DataCopyStream[Long, Seq[(Int, Future[Long])]] {
 
-  override implicit val ex: ExecutionContext = dct.akkastream.executionContext
-  override implicit val sys: ActorSystem = dct.akkastream.system
+  override implicit val ex: ExecutionContext = dct.akkastreams.executionContext
+  override implicit val sys: ActorSystem = dct.akkastreams.system
 
   implicit val session: SlickSession = {
     import dct.slick._
@@ -153,13 +152,7 @@ abstract class ParquetToPGStream(targetTable: String,
     )
   }
 
-  val provider: ConnectionProvider = ConnectionProvider()
-  implicit def conn: Connection = provider.acquireBase() match {
-    case Success(conn) => conn
-    case Failure(e) =>
-      logError("Failed to establish initial connection to DB")
-      throw e
-  }
+  implicit val provider: ConnectionProvider = ConnectionProvider()
 
   val (targetSchema, targetTableName) = targetTable.split('.') match {
     case Array(s, t) => (s, t)
@@ -173,10 +166,12 @@ abstract class ParquetToPGStream(targetTable: String,
 
   sys.registerOnTermination(() => session.close())
 
-  override val matValuesAggregator: Seq[Long] => Long = _.sum
+  override val matValuesAggregator: Seq[Seq[(Int, Future[Long])]] => Future[Long] =
+    mat => Future.sequence( mat.flatMap(_.map(v => v._2))  ).map(_.sum)
+
   override val expectedMetaData: Try[Long] = Try(sparkTable.totalRowsCount)
-  override val streams: Try[Seq[RunnableGraph[Seq[Future[Long]]]]] =
-    Try(SparkParquetTableToPGCopyStream(sparkTable).buildStreams())
+  override val streams: Try[Seq[RunnableGraph[Seq[(Int, Future[Long])]]]] =
+    Try(SparkParquetToPGTableStream(sparkTable, temporaryTable).map(_.stream))
 
   lazy val sparkTable: SparkParquetTable =
     new SparkParquetTable(

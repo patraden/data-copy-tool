@@ -42,8 +42,7 @@ Compile / resourceDirectory := baseDirectory.value / "src" / "main" / "resources
 Compile / unmanagedClasspath += baseDirectory.value / "src" / "main" / "resources"
 
 /**
- * Assembly plugin settings.
- * (just removing unnecessary meta files)
+ * Assembly plugin settings (just removing unnecessary meta files).
  */
 ThisBuild / assemblyMergeStrategy  := {
     case PathList("module-info.class") => MergeStrategy.discard

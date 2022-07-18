@@ -1,8 +1,8 @@
 package dct
 
+import dct.spark.SparkPGSQLUtils._
+
 import scala.concurrent.Future
-import dct.spark.SparkPGSQLUtils.{changeTableSchema, createTable, dropTable, getSchemaOption, renameTable, tableExists}
-import org.apache.spark.sql.types.StructType
 
 /**
  * [[ParquetToPGStream]] implementation for "Overwrite target table" scenario.
@@ -26,7 +26,7 @@ class ParquetToPGOverwrite(targetTable: String,
         throw new StreamInitializationException(s"Table $targetTable does not exist")
       }
 
-      val targetTableSchema = getSchemaOption(targetTable).getOrElse(new StructType())
+      val targetTableSchema = getSchema(targetTable)
       val sourceTableSchema = sparkTable.schema
 
       import dct.spark.StructTypeExtra
@@ -35,16 +35,14 @@ class ParquetToPGOverwrite(targetTable: String,
         throw new StreamInitializationException(s"Target and source schemas mismatch")
       }
       createTable(temporaryTable, Option(targetTableSchema))
-      provider.release(None)
     } catch {
       case e: Exception =>
         throw new StreamInitializationException(e.getMessage, e.getCause)
     }
 
   override def doRecover(): PartialFunction[Throwable, Future[Unit]] = {
-    case _: RenameTempToTargetException => Future{
-      renameTable(targetSchema + "." + tempTableName, targetTableName)
-      provider.release(None)}
+    case _: RenameTempToTargetException =>
+      Future(renameTable(targetSchema + "." + tempTableName, targetTableName))
     case _: StreamWrappingException => dropTempTableRecovery
     case _: StreamException => dropTempTableRecovery
   }
@@ -53,20 +51,15 @@ class ParquetToPGOverwrite(targetTable: String,
     try {
       dropTable(targetTable)
       try {
-        changeTableSchema(tempTableName, tempSchema, targetSchema)
+        changeTableSchema(temporaryTable, targetSchema)
         renameTable(targetSchema + "." + tempTableName, targetTableName)
       } catch { case e: Exception =>
         throw new RenameTempToTargetException(e.getMessage, e.getCause)
       }
-      provider.release(None)
     } catch {
       case e: RenameTempToTargetException => throw e
       case e: Exception => throw new StreamWrappingException(e.getMessage, e.getCause)
     }
 
-
-  private def dropTempTableRecovery: Future[Unit] = Future{
-    dropTable(temporaryTable)
-    provider.release(None)
-  }
+  private def dropTempTableRecovery: Future[Unit] = Future(dropTable(temporaryTable))
 }

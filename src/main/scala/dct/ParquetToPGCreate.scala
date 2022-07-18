@@ -1,9 +1,7 @@
 package dct
 
-import java.sql.Connection
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
 import dct.spark.SparkPGSQLUtils.{createTable, dropTable, tableExists}
+import scala.concurrent.Future
 
 /**
  * [[ParquetToPGStream]] implementation for "Create target table" scenario.
@@ -22,7 +20,6 @@ class ParquetToPGCreate(targetTable: String,
     try {
       if (!tableExists(targetTable)) {
         createTable(targetTable, Option(sparkTable.schema))
-        provider.release(None)
       } else {
         logError(s"""Table $targetTable already exists. Please use \"Overwrite\" mode""")
         throw new StreamInitializationException(s"Table $targetTable already exists")
@@ -38,10 +35,6 @@ class ParquetToPGCreate(targetTable: String,
   }
 
   override def doAfterStreaming(): Unit = ()
-
-  private def dropTableRecovery(e: Throwable): Future[Unit] = Future{
-    dropTable(targetTable)
-    provider.release(None)
-  }
+  private def dropTableRecovery(e: Throwable): Future[Unit] = Future(dropTable(targetTable))
 
 }

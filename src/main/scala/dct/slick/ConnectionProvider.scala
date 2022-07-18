@@ -6,6 +6,10 @@ import scala.util.Try
 import akka.stream.alpakka.slick.scaladsl.SlickSession
 import slick.jdbc.hikaricp.HikariCPJdbcDataSource
 
+/**
+ * Generic connection provider capable to provide base Java and alternative PosgresSQL JDBC connections.
+ * All DB Sources and Sinks will require this interface.
+ */
 trait ConnectionProvider {
   def acquireBase(): Try[Connection]
   def acquire(): Try[PGConnection]
@@ -13,21 +17,22 @@ trait ConnectionProvider {
 }
 
 /**
- * PostgreSQL JDBC [[PGConnection]] provider.
+ * PostgreSQL JDBC connection provider implementation.
  */
 object ConnectionProvider {
-  def apply()
-           (implicit slickSession: SlickSession): ConnectionProvider =
 
+  def apply()(implicit slickSession: SlickSession): ConnectionProvider =
     new ConnectionProvider{
       private val pool = slickSession.db.source.asInstanceOf[HikariCPJdbcDataSource]
       private var conn: Connection = _
-      def acquireBase(): Try[Connection] = Try{
-        if (conn == null || conn.isClosed)
-          conn = pool.createConnection()
-        conn
-      }
+      def acquireBase(): Try[Connection] =
+        Try{
+          if (conn == null || conn.isClosed) conn = pool.createConnection()
+          conn
+        }
       def acquire(): Try[PGConnection] = acquireBase().map(_.unwrap(classOf[PGConnection]))
-      def release(exOpt: Option[Throwable]): Unit = conn.close()
+      def release(exOpt: Option[Throwable]): Unit =
+        if (conn != null || !conn.isClosed) conn.close()
     }
+
 }

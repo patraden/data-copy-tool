@@ -1,145 +1,136 @@
 package dct.spark
 
+import dct.slick.ConnectionProvider
+import java.sql.{Connection, ResultSet, SQLException, Statement}
+import scala.util.{Failure, Success, Try}
 import org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils
-import org.apache.spark.sql.jdbc.{JdbcDialect, JdbcDialects, JdbcType}
-import org.apache.spark.sql.types.{DataType, StructType}
-import java.sql.{Connection, SQLException}
-import scala.util.Try
+import org.apache.spark.sql.jdbc.{JdbcDialect, JdbcDialects}
+import org.apache.spark.sql.types.StructType
 
-//TODO initiate logger as instance into val
-//TODO maximum code reuse from JdbcUtils
-
+/**
+ * Postgres SQl utility methods to create, alter and drop objects in database.
+ * Re-uses spark internal utilities for critical and sensitive operations like type conversion.
+ */
 object SparkPGSQLUtils extends Logger {
 
-  private val url = "jdbc:postgresql"
-  private lazy val dialect: JdbcDialect = JdbcDialects.get(url)
+  private val UrlPrefix = "jdbc:postgresql"
+  private lazy val dialect: JdbcDialect = JdbcDialects.get(UrlPrefix)
 
-  def insertIntoTable(sourceTableName: String,
-                      targetTableName: String)
-                     (implicit conn: Connection): Unit = {
-
-    val columnNames = getSchemaOption(targetTableName).
-      map(schema => schema.map(f => s"""\"${f.name}\"""").mkString(",")).
-      getOrElse{
-        logError("Could not get target table schema for insert")
-      }
-
-    val sql =
-      s"""
-         |INSERT INTO $targetTableName ($columnNames)
-         |SELECT $columnNames FROM $sourceTableName
-         |""".stripMargin
-    executeStatement(sql)
-  }
-
-  def changeTableSchema(tableName: String,
-                        oldSchema: String,
-                        newSchema: String)
-                       (implicit conn: Connection): Unit = {
-    val sql = s"ALTER TABLE $oldSchema.$tableName set schema $newSchema"
-    executeStatement(sql)
-  }
-
-  def getJdbcType(dt: DataType): JdbcType = JdbcUtils.getJdbcType(dt, dialect)
+  private def schemaString(schema: StructType): String =
+    JdbcUtils.schemaString(schema, caseSensitive = true, UrlPrefix)
 
   /**
-   * Execute sql statement.
-   * @param timeout see https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
+   * Database connection resources management template.
    */
-  private def executeStatement(sql: String, timeout: Int = 0)
-                              (implicit conn: Connection): Unit = {
-    val statement = conn.createStatement
-    try {
-      statement.setQueryTimeout(timeout)
-      statement.executeUpdate(sql)
-      logInfo(s"""Executed query: $sql""")
-    } catch {
-      case e: SQLException =>
-        logError(s"""Failed to execute query: $sql due to ${e.getErrorCode}: $e.getMessage""".stripMargin)
+  private def withConnectionProvider[T](provider: ConnectionProvider)
+                                    (op: Connection => T): T = {
+    provider.acquireBase() match {
+      case Success(conn) =>
+        try op(conn) finally provider.release(None)
+      case Failure(e) =>
+        logError("Failed to establish connection to DB")
+        provider.release(Option(e))
         throw e
     }
-    finally {
-      statement.close()
-    }
   }
 
   /**
-   * Truncates a table from the JDBC database without side effects.
+   * SQL query execution template.
+   * @param sql query.
+   * @param timeout connection timeout.
+   * @param prepare function returning [[Statement]] for query.
+   * @param exec function returning statement execution result.
+   * @param provider [[ConnectionProvider]]
+   * @tparam T statement execution result type (e.g. Int for update and ResultSet for query).
+   * @tparam S statement type (might be subclass like PreparedStatement).
    */
-  def truncateTable(tableName: String)
-                   (implicit conn: Connection): Unit =
-    executeStatement(dialect.getTruncateQuery(tableName))
+  private def executeStatement[T, S <: Statement](sql: String, timeout: Int, withLog: Boolean)
+                                                 (prepare: (Connection, String) => S)
+                                                 (exec: (S, String) => T)
+                                                 (implicit provider: ConnectionProvider): T =
+    withConnectionProvider(provider){
+      conn =>
+        val statement = prepare(conn, sql)
+        try {
+          statement.setQueryTimeout(timeout)
+          val res = exec(statement, sql)
+          if (withLog)
+            logInfo(s"""Executed query: $sql""")
+          res
+        } catch {
+          case e: SQLException =>
+            if (withLog)
+              logError(s"""Failed to execute query: $sql due to ${e.getErrorCode}: $e.getMessage""".stripMargin)
+            throw e
+        }
+        finally statement.close()
+    }
 
-  /**
-   * Returns true if the table already exists.
-   */
-  def tableExists(tableName: String)
-                 (implicit conn: Connection): Boolean =
-    Try {
-      val statement = conn.prepareStatement(dialect.getTableExistsQuery(tableName))
-      try {
-        statement.setQueryTimeout(0)
-        statement.executeQuery()
-      } finally {
-        statement.close()
-      }
-    }.isSuccess
+  private def executeUpdate(sql: String, timeout: Int = 0, withLog: Boolean = true)
+                           (implicit provider: ConnectionProvider): Int =
+    executeStatement(sql, timeout, withLog)
+    { (conn, _) => conn.createStatement }
+    { (statement, sql) => statement.executeUpdate(sql) }
 
-  def renameTable(oldTable: String, newTable: String)
-                 (implicit conn: Connection): Unit =
-    executeStatement(dialect.renameTable(oldTable, newTable))
+  private def executeQuery(sql: String, timeout: Int = 0, withLog: Boolean = true)
+                           (implicit provider: ConnectionProvider): ResultSet =
+    executeStatement(sql, timeout, withLog)
+    { (conn, sql) => conn.prepareStatement(sql) }
+    { (statement, _) => statement.executeQuery() }
 
-  /**
-   * Compute the schema string.
-   */
-  def schemaString(schema: StructType, caseSensitive: Boolean): String =
-    JdbcUtils.schemaString(schema, caseSensitive, url)
+  def changeTableSchema(fullTableName: String, schema: String)
+                       (implicit provider: ConnectionProvider): Int = {
+    val (oldSchema, tableName) = fullTableName.split('.') match {
+      case Array(s, t) => (s, t)
+      case Array(t) => ("public", t)
+    }
+    executeUpdate(s"ALTER TABLE $oldSchema.$tableName set schema $schema")
+  }
 
-  /**
-   * Create table with options.
-   */
-  def createTable(tableName: String,
+  def truncateTable(fullTableName: String)
+                   (implicit provider: ConnectionProvider): Int =
+    executeUpdate(dialect.getTruncateQuery(fullTableName))
+
+  def tableExists(fullTableName: String)
+                 (implicit provider: ConnectionProvider): Boolean =
+    Try { executeQuery( dialect.getTableExistsQuery(fullTableName), withLog = false) }.isSuccess
+
+  def renameTable(fullTableName: String,
+                  newFullTableName: String)
+                 (implicit provider: ConnectionProvider): Int = {
+    val newTableName = newFullTableName.split('.') match {
+      case Array(_, t) => t
+      case Array(t) => t
+    }
+    executeUpdate(dialect.renameTable(fullTableName, newTableName))
+  }
+
+  def createTable(fullTableName: String,
                   schemaOpt: Option[StructType] = None,
                   extraOptions: String = "")
-                 (implicit conn: Connection): Unit = {
+                 (implicit provider: ConnectionProvider): Int = {
     val sql: String = schemaOpt.
-      map(schema => schemaString(schema, caseSensitive = true)).
-      map(schemaStr => s"""CREATE TABLE $tableName ($schemaStr) $extraOptions""").
-      getOrElse(s"""CREATE TABLE $tableName $extraOptions""")
-    executeStatement(sql)
+      map(schema => schemaString(schema)).
+      map(schemaStr => s"""CREATE TABLE $fullTableName ($schemaStr) $extraOptions""").
+      getOrElse(s"""CREATE TABLE $fullTableName $extraOptions""")
+    executeUpdate(sql)
   }
 
   def dropTable(tableName: String)
-               (implicit conn: Connection): Unit = {
-    try executeStatement(s"DROP TABLE $tableName")
-    catch {case _: SQLException =>
-      logInfo(s"""Apparently $tableName does not exists.Thus there is nothing to drop""")
+               (implicit provider: ConnectionProvider): Int =
+    try
+      executeUpdate(s"DROP TABLE $tableName")
+    catch { case _: SQLException =>
+      logWarning(s"""Apparently $tableName does not exists.Thus there is nothing to drop""")
+      -1
     }
-  }
 
-  /**
-   * Returns the schema if the table already exists.
-   */
-  def getSchemaOption(tableName: String)
-                     (implicit conn: Connection): Option[StructType] = {
-    try {
-      val sql = dialect.getSchemaQuery(tableName)
-      val statement = conn.prepareStatement(sql)
-      try {
-        statement.setQueryTimeout(0)
-        Some(JdbcUtils.getSchema(statement.executeQuery(), dialect))
-      } catch {
-        case e: SQLException =>
-          logWarning(s"""Failed to execute query: $sql due to: $e.getMessage""")
-          None
-      } finally {
-        statement.close()
-      }
-    } catch {
-      case e: SQLException =>
-        logWarning(s"""Failed to get schema for $tableName due to: $e.getMessage""")
-        None
-    }
+  def getSchema(tableName: String)
+               (implicit provider: ConnectionProvider): StructType = {
+    val sql = dialect.getSchemaQuery(tableName)
+    executeStatement(sql, timeout = 0, withLog = true)
+    { (conn, _) => conn.prepareStatement(sql) }
+    { (statement, _) => JdbcUtils.getSchema(statement.executeQuery(), dialect) }
   }
 
 }

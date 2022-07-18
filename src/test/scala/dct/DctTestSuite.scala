@@ -29,6 +29,7 @@ class DctTestSuite extends AsyncFunSuite{
       )
 
       val cliConfig = CLIConfig(args)
+
       val stream = new ParquetToPGCreate(
         cliConfig.sqlTable,
         cliConfig.parquetFilePath,

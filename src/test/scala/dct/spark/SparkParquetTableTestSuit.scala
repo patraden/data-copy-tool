@@ -4,7 +4,6 @@ import dct.json.ADFMapping
 import org.apache.spark.sql.types._
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.funsuite.AnyFunSuite
-
 import java.net.{URLDecoder => decoder}
 
 class SparkParquetTableTestSuit extends AnyFunSuite with BeforeAndAfterAll {
@@ -19,7 +18,7 @@ class SparkParquetTableTestSuit extends AnyFunSuite with BeforeAndAfterAll {
       decode(getClass.getResource("/").
         getPath, "UTF-8")
 
-    // Keep it aside if size is substantial
+    // Keeping it aside if size is substantial
     val largeParquetFilePath = "/Users/patraden/Downloads/TANDER_SALES_COMPETITORS.large.parquet"
 
     testParquetFiles = new java.io.File(testResourceRoot).

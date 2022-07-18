@@ -3,13 +3,17 @@ package dct.slick
 import akka.stream.alpakka.slick.scaladsl.SlickSession
 import com.typesafe.config.ConfigValueFactory
 import org.scalatest.funsuite.AnyFunSuite
-
 import java.sql.{SQLException, SQLTransientConnectionException}
 
-class ConnectionProviderTestSuit
-  extends AnyFunSuite {
+class ConnectionProviderTestSuit extends AnyFunSuite {
 
   @transient implicit var session: SlickSession = _
+
+  test("session threads numbers") {
+    session = SlickSession.forConfig(defaultDBConfig)
+    assert(session.db.source.maxConnections.get == defaultDBConfig.getInt("db.numThreads"))
+    session.close()
+  }
 
   test("establish connection") {
     session = SlickSession.forConfig(defaultDBConfig)

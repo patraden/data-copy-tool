@@ -6,7 +6,7 @@ package object dct {
 
   /**
    * Extended [[Future]] implicit with "transactional" recovery and verbose logging.
-   * inspired by [[https://stackoverflow.com/questions/60952195/compose-futures-with-recovery-in-scala/60955010#60955010 SO answer]]
+   * @see [[https://stackoverflow.com/questions/60952195/compose-futures-with-recovery-in-scala/60955010#60955010 SO answer]]
    */
   class TransactFuture[T](underlying: Future[T], rollback: PartialFunction[Throwable, Future[Unit]], val sys: ActorSystem)
     extends dct.spark.Logger {
@@ -36,6 +36,9 @@ package object dct {
     }
   }
 
+  /**
+   * [[Future]] implicit extension to [[TransactFuture]].
+   */
   implicit class FutureOps[T](underling: Future[T]) {
     def rollbackWith(rollback: PartialFunction[Throwable, Future[Unit]], sys: ActorSystem): TransactFuture[T] = {
       new TransactFuture[T](underling, rollback, sys)

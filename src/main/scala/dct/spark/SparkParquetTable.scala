@@ -2,11 +2,9 @@ package dct.spark
 
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.FileStatus
-
 import org.apache.parquet.format.converter.ParquetMetadataConverter.NO_FILTER
 import org.apache.parquet.hadoop.metadata.BlockMetaData
 import org.apache.parquet.hadoop.ParquetInputFormat
-
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.catalyst.InternalRow
 import org.apache.spark.sql.catalyst.encoders.{ExpressionEncoder, RowEncoder}
@@ -44,6 +42,9 @@ class SparkParquetTable(
   userSpecifiedSchema,
   classOf[ParquetFileFormat]) {
 
+  /**
+   * Full parquet schema including partitioning.
+   */
   override lazy val dataSchema: StructType = {
     val schema = userSpecifiedSchema.map { schema =>
       val partitionSchema = fileIndex.partitionSchema
@@ -67,22 +68,28 @@ class SparkParquetTable(
     schema
   }
 
-  def parallelism: Int = MAX_PARQUET_READ_PARALLELISM min
+  /**
+   * Parquet read parallelism restricts concurrent parquet row groups load into memory (heap).
+   */
+  def parallelism: Int = MazParquetReadParallelism min
     parquetBlocksMetaData.
       groupBy { case (status, _) => status}.
       map { case (_, v) => v.length }.iterator.max
 
+  /**
+   * Gets total row count from parquet file metadata for all files.
+   */
   def totalRowsCount: Long =
     parquetBlocksMetaData.
       foldLeft(0L){ case (op, (_, block)) => op + block.getRowCount}
 
-  private val parquetScan =
+  private[dct] val parquetScan =
     newScanBuilder(options).build().asInstanceOf[ParquetScan]
 
-  private val readerFactory =
+  private[dct] val readerFactory =
     parquetScan.createReaderFactory().asInstanceOf[ParquetPartitionReaderFactory]
 
-  val splitFiles: Seq[PartitionedFile] = fileIndex
+  private[dct] val splitFiles: Seq[PartitionedFile] = fileIndex
     .listFiles(parquetScan.partitionFilters, parquetScan.dataFilters)
     .flatMap { partition =>
       partition.files.flatMap { file =>
@@ -98,21 +105,25 @@ class SparkParquetTable(
       }
     }
 
-  lazy val inferredSchema: Option[StructType] = inferSchema(fileIndex.allFiles())
+  private[dct] lazy val inferredSchema: Option[StructType] = inferSchema(fileIndex.allFiles())
 
   /**
    * Standard spark parquet [[PartitionReader]]
    */
-  private lazy val internalRowReader: PartitionedFile => PartitionReader[InternalRow] =
+  private[dct] lazy val internalRowReader: PartitionedFile => PartitionReader[InternalRow] =
     readerFactory.buildReader
 
-  val rowReader: PartitionedFile => SparkRowReader = (file: PartitionedFile) =>
-    new SparkRowReader(internalRowReader(file), rowConverter)
+  /**
+   * Reader Initializer for [[PartitionedFile]].
+   * @return [[SparkPartitionReader]]
+   */
+  val rowReader: PartitionedFile => SparkPartitionReader = (file: PartitionedFile) =>
+    new SparkPartitionReader(internalRowReader(file), rowConverter)
 
   /**
    * Standard spark encoder from [[InternalRow]] to [[Row]]
    */
-  lazy val rowConverter: ExpressionEncoder.Deserializer[Row] =
+  private lazy val rowConverter: ExpressionEncoder.Deserializer[Row] =
     RowEncoder(schema).resolveAndBind().createDeserializer()
 
   /**
@@ -127,7 +138,7 @@ class SparkParquetTable(
   /**
    * Row group metadata for each parquet file.
    */
-  lazy val parquetBlocksMetaData: Seq[(FileStatus, BlockMetaData)] = {
+  private[dct] lazy val parquetBlocksMetaData: Seq[(FileStatus, BlockMetaData)] = {
     import scala.jdk.CollectionConverters._
     val hadoopConf = new Configuration()
     hadoopConf.set(ParquetInputFormat.READ_SUPPORT_CLASS, classOf[ParquetReadSupport].getName)
