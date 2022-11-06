@@ -23,11 +23,11 @@ object ConnectionProvider {
 
   def apply()(implicit slickSession: SlickSession): ConnectionProvider =
     new ConnectionProvider{
-      private val pool = slickSession.db.source.asInstanceOf[HikariCPJdbcDataSource]
       private var conn: Connection = _
       def acquireBase(): Try[Connection] =
         Try{
-          if (conn == null || conn.isClosed) conn = pool.createConnection()
+          if (conn == null || conn.isClosed)
+            conn = slickSession.db.source.asInstanceOf[HikariCPJdbcDataSource].createConnection()
           conn
         }
       def acquire(): Try[PGConnection] = acquireBase().map(_.unwrap(classOf[PGConnection]))

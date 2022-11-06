@@ -24,6 +24,7 @@ val root = (project in file("."))
       exclude("com.typesafe.akka", "akka-protobuf-v3_2.13"),
     libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3",
     libraryDependencies += "org.postgresql" % "postgresql" % "42.3.4",
+    libraryDependencies += "org.apache.spark" %% "spark-streaming" % "3.2.1",
     libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.2.1"
       exclude("org.apache.zookeeper", "zookeeper")
       exclude("commons-logging", "commons-logging")
